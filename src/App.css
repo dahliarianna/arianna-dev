@@ -134,7 +134,9 @@ button:hover {
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  padding: 4px 5px 4px 5px;
+  /* padding: 4px 10px 4px 10px; */
+  padding-left: 10px;
+  padding-right: 10px;
   height: 150px;
   width: 150px;
   border-radius: 50%;
@@ -145,17 +147,19 @@ button:hover {
   /* box-shadow: 6px 6px 12px rgb(75, 75, 75),
   -6px -6px 12px rgb(174, 173, 173); */
   box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 0 -10px 15px -1px rgba(132, 131, 131, 0.6), inset 0 3px 4px -1px rgba(132, 131, 131, 0.2), inset 0 0 5px 1px rgba(132, 131, 131, 0.8), inset 0 20px 30px 0 rgba(132, 131, 131, 0.2);
-  background: #cccccc;
+  /* background: #cccccc; */
+  background: rgb(132, 131, 131);
+  text-shadow: 1px 1px 2px rgb(94, 93, 93);
   /* border: 1px solid rgb(132, 131, 131); */
-  color: rgb(130, 128, 128);
+  color: rgb(219, 219, 219);
 
 }
 .floating-button:hover {
   font-size: 20px;
   margin-left: 4px;
   margin-right: 4px;
-  height: 170px;
-  width: 170px;
+  height: 160px;
+  width: 160px;
   /* box-shadow: rgba(220, 220, 220, 0.35) 0px 5px 15px; */
   box-shadow: inset 4px 4px 12px rgb(174, 173, 173),
   inset -4px -4px 12px rgb(75, 75, 75);
@@ -195,6 +199,7 @@ button:hover {
   box-shadow: 6px 6px 12px #000000,
               -6px -6px 12px #323232;
   margin-bottom: 10px;
+  /* text-shadow: 1px 1px 2px rgb(80, 79, 79); */
   /* transition: font-size .6s, height .6s, box-shadow .6s; */
   transition: all .6s;
 }
@@ -234,6 +239,10 @@ a:hover{
   padding-top: 50px;
   background-color: rgb(132, 131, 131);
   min-width: 800px;
+  box-shadow: inset 4px 4px 12px rgb(187, 186, 186),
+  inset -4px -4px 12px rgb(50, 49, 49);
+  border-radius: 10px;
+  position: relative;
 }
 .contact {
   font-size: 35px;
