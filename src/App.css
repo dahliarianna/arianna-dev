@@ -1,3 +1,57 @@
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
 .App {
   text-align: center;
   background-color: #242425;
@@ -94,9 +148,9 @@ button:hover {
 
 }
 .circle1 {
-  width: 18rem;
-  height: 18rem;
-  top: -5rem;
+  width: 14rem;
+  height: 14rem;
+  top: 0rem;
   left: 3rem;
   animation: moving-circle1 infinite 15s
 }
@@ -244,10 +298,40 @@ a:hover{
   border-radius: 10px;
   position: relative;
 }
+.aboutme {
+  min-height: 100vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 35px;
+}
+.aboutme p {
+  font-size: 28px;
+  padding: 10px 20px
+}
+.imageDiv {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+.imageDiv img {
+  width: 25vw;
+  box-shadow: 6px 6px 12px #313131,
+  -6px -6px 12px #404040;
+  transition: all .5s;
+}
+.imageDiv img:hover {
+  box-shadow: 6px 6px 12px #4b4b4b,
+  -6px -6px 12px #868585;
+}
 .contact {
   font-size: 35px;
   height: 80vh;
   position: relative;
+  margin-top: 100px;
+}
+.contact p {
+  font-size: 28px;
 }
 .socials a  {
   color: #090909;

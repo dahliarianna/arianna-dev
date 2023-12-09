@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import ariannalogo from "./assets/ariannalogo.gif";
+import art8 from "./assets/art8.JPG";
+import birthday from "./assets/birthday.JPG";
+import ramen from "./assets/ramen.JPG";
 // import grainybackground from '../public/grainybackground.png'
 
 function Home() {
@@ -39,14 +42,14 @@ function Home() {
 
   return (
     <div className="homePage">
-      <div className='logo'>
-        <img src={ariannalogo} alt='logo' className='actualLogo'/>
+      <div className="logo">
+        <img src={ariannalogo} alt="logo" className="actualLogo" />
       </div>
       <div className="bodyContent">
         <div className="intro">
           <h2>Hi, I'm Arianna</h2>
           <h1>
-            An enthusiastic Software Engineer experienced in full-stack
+            an enthusiastic software engineer experienced in full-stack
             JavaScript development.
           </h1>
         </div>
@@ -142,13 +145,41 @@ function Home() {
             </button>
           </div>
         </div>
+        <div className="aboutme">
+          <h2>ABOUT</h2>
+          <div className="aboutmeContent">
+            <p>
+              I’m a full stack software engineer located in Houston, TX,
+              specializing in React and Node. Before programming, I have always
+              found my creative side in traditional arts such as painting and
+              drawing, but little did I know that transitioning into coding
+              would be an extension of that creativity. I realized that behind
+              every line of code lies an opportunity for artistic expression — a
+              chance to combine my creative thinking with logical
+              problem-solving skills to create something not just visually
+              appealing, but also practical and functional.
+            </p>
+            <div className="imageDiv">
+              <img src={art8} alt="art8" />
+              <img src={birthday} alt="birthday" />
+              <img src={ramen} alt="ramen" />
+            </div>
+          </div>
+        </div>
         <div className="contact">
           <h2>CONTACT</h2>
           <div>
             <p>dahliarianna@gmail.com</p>
             <div className="socials">
-              <a href="https://www.linkedin.com/in/ariannanguyen/" target='blank'>linkedin</a>
-              <a href="https://github.com/dahliarianna" target='blank'>github</a>
+              <a
+                href="https://www.linkedin.com/in/ariannanguyen/"
+                target="blank"
+              >
+                linkedin
+              </a>
+              <a href="https://github.com/dahliarianna" target="blank">
+                github
+              </a>
             </div>
           </div>
           <div className="circle circle1"></div>
