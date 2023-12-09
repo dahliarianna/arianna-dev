@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ariannalogo from "./assets/ariannalogo.gif";
-import art8 from "./assets/art8.jpg";
-import birthday from "./assets/birthday.jpg";
-import ramen from "./assets/ramen.jpg";
+import art8 from "./assets/art8.JPG";
+import birthday from "./assets/birthday.JPG";
+import ramen from "./assets/ramen.JPG";
 // import grainybackground from '../public/grainybackground.png'
 
 function Home() {
