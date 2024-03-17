@@ -145,8 +145,8 @@ button:hover {
   position: absolute;
   animation: moving-circle infinite 15s;
   box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 0 -10px 15px -1px rgba(132, 131, 131, 0.6), inset 0 3px 4px -1px rgba(132, 131, 131, 0.2), inset 0 0 5px 1px rgba(132, 131, 131, 0.8), inset 0 20px 30px 0 rgba(132, 131, 131, 0.2);
-
 }
+
 .circle1 {
   width: 14rem;
   height: 14rem;
@@ -181,6 +181,9 @@ button:hover {
   bottom: 2rem;
   right: 50%;
   animation: moving-circle5 infinite 15s
+}
+.circle5:hover {
+  transform: scale(1.5);
 }
 
 .floating-button {

@@ -169,7 +169,6 @@ function Home() {
         <div className="contact">
           <h2>CONTACT</h2>
           <div>
-            <p>dahliarianna@gmail.com</p>
             <div className="socials">
               <a
                 href="https://www.linkedin.com/in/ariannanguyen/"
