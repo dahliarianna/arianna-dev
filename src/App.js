@@ -1,23 +1,50 @@
+// import "./App.css";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Home from "./Home";
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <Router>
+//         <div className="App">
+//           <Routes>
+//             <Route path="/" element={<Home />} />
+//           </Routes>
+//         </div>
+//       </Router>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Home";
-// import Landing from "./components/Landing";
-// import Contact from "./components/Contact";
-// import Projects from "./components/Projects";
+import ClosedBook from "./ClosedBook";
+import OpenBook from "./OpenBook";
 
 function App() {
+  const [showClosedBook, setShowClosedBook] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowClosedBook(false); 
+    }, 8000); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="App">
-      <Router>
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            {/* <Route path="/" element={<Landing />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} /> */}
-          </Routes>
+      {showClosedBook ? (
+        <div className="book-container">
+          <ClosedBook />
         </div>
-      </Router>
+      ) : (
+        <div className="book-container">
+          <OpenBook />
+        </div>
+      )}
     </div>
   );
 }
