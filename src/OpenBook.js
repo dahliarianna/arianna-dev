@@ -15,10 +15,11 @@ import { RiJavascriptFill } from "react-icons/ri";
 import { TbBrandTypescript } from "react-icons/tb";
 import { BiLogoPostgresql, BiLogoMongodb } from "react-icons/bi";
 
-function OpenBook() {
+function OpenBook(props) {
   const [username, setUsername] = useState("");
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
+  const {clicked, setClicked} = props;
 
   const handleUsername = (e) => {
     setUsername(e.target.value);
@@ -26,6 +27,10 @@ function OpenBook() {
   const handleMessage = (e) => {
     setMessage(e.target.value);
   };
+  const handleBookClick = () => {
+    setClicked(true);
+  };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,7 +65,7 @@ function OpenBook() {
       <input type="checkbox" id="checkbox-page1" />
       <input type="checkbox" id="checkbox-page2" />
       {/* <input type="checkbox" id="checkbox-page3" /> */}
-      <div className="book">
+      <div className="book" onClick={handleBookClick}>
         <div className="cover">
           <div className="coverFrontPage">
             <div className="coverHeader">

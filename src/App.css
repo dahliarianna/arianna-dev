@@ -518,10 +518,21 @@ a:hover{
   position:fixed;
   width: 100vw;
 }
+.userNote{
+  position: absolute;
+  bottom: 10px;
+  left: 10px
+}
+.userNote p {
+  color: white;
+  font-size: 12px;
+}
 .stage {
   position: relative;
   width: 400px; 
   height: 500px; 
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
   perspective: 1600px;
 
@@ -530,7 +541,11 @@ a:hover{
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
   transform-origin: center;
   right: 39px;
   top: -17.25px;
@@ -575,18 +590,49 @@ a:hover{
 
 .coverCover {
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   /* -webkit-transform: translateZ(50px); */
   }
 
 /* .coverCover figure { -webkit-transform-origin: 50% 50% 0; } */
 
-.front { transform: translateZ(10px); }
-.back { transform: rotateY(180deg) translateZ(10px); }
+.front {
+  -webkit-transform: translateZ(10px);
+  -moz-transform: translateZ(10px);
+  transform: translateZ(10px);
+ }
+.back {
+  -webkit-transform: rotateY(180deg) translateZ(10px);
+  -moz-transform: rotateY(180deg) translateZ(10px);
+  transform: rotateY(180deg) translateZ(10px);
+}
+/* 
+-webkit-transform: 
+-moz-transform: 
+transform:  
+*/
 
-.top { transform: rotateX(90deg) translateZ(4px) }
-.bottom { transform: rotateX(-90deg) translateZ(480px); }
-.left { transform: rotateY(-90deg) translateZ(10px) ; }
-.right { transform: rotateY(90deg) translateZ(385px) translateY(1%); }
+.top { 
+  -webkit-transform: rotateX(90deg) translateZ(4px);
+  -moz-transform: rotateX(90deg) translateZ(4px);
+  transform: rotateX(90deg) translateZ(4px);
+}
+.bottom { 
+  -webkit-transform: rotateX(-90deg) translateZ(480px);
+    -moz-transform: rotateX(-90deg) translateZ(480px);
+  transform: rotateX(-90deg) translateZ(480px);
+}
+.left { 
+  -webkit-transform: rotateY(-90deg) translateZ(10px) ;
+  -moz-transform: rotateY(-90deg) translateZ(10px) ;
+  transform: rotateY(-90deg) translateZ(10px) ;
+ }
+.right { 
+  -webkit-transform: rotateY(90deg) translateZ(385px) translateY(1%) ;
+  -moz-transform: rotateY(90deg) translateZ(385px) translateY(1%) ;
+  transform: rotateY(90deg) translateZ(385px) translateY(1%) ;
+}
 
 
 .front {
@@ -792,7 +838,9 @@ input[type="checkbox"] {
   position: relative;
   transition-duration: 1s;
   perspective: 1600px;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d ;
+  -moz-transform-style: preserve-3d ;
+  transform-style: preserve-3d ;
 }
 /* .book {
   transform-style: preserve-3d;
@@ -811,11 +859,19 @@ input[type="checkbox"] {
   position: absolute;
   z-index: 4;
   transform-origin: center left;
+  -webkit-transform-origin: center left;
+  -moz-transform-origin: center left;
   transition: transform 1s;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
   transform: rotateX(0deg);
-  
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
 }
+
 .coverNext, .coverPrev {
   position: absolute;
   cursor: pointer;
@@ -954,6 +1010,8 @@ input[type="checkbox"] {
 .coverBackPage {
   position: absolute;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -962,6 +1020,7 @@ input[type="checkbox"] {
   box-shadow: 0px 20px 15px -20px rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(to left, rgb(233, 226, 226)rgb(213, 212, 212)f0, #f7f7f7);
 }
+
 .coverBackPage:before {
   content: '';
   position: absolute;
@@ -1026,6 +1085,12 @@ input[type="checkbox"] {
   transform-origin: left;
   transform-style: preserve-3d;
   transform: rotateX(0deg);
+  -webkit-transform-origin: left;
+  -moz-transform-origin: left;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
   transition-duration: 1s;
   box-shadow: rgba(0, 0, 0, 0.15) 1.6px 2.4px 3.2px;
   /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 5px; */
@@ -1033,6 +1098,7 @@ input[type="checkbox"] {
   flex-direction: column;
   align-items: center;
 }
+
 .page div{
   width: 85%;
 }
@@ -1050,12 +1116,15 @@ input[type="checkbox"] {
 .backPage {
   position: absolute;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   backface-visibility: hidden;
   color: rgb(28, 28, 28);
 }
+
 .next, .prev {
   position: absolute;
   cursor: pointer;
@@ -1387,19 +1456,27 @@ input[type="checkbox"] {
 
 #checkboxCover:checked ~ .book {
   transform: translateX(200px);
+  -webkit-transform: translateX(200px);
+  -moz-transform: translateX(200px);
 }
 
 #checkboxCover:checked ~ .book .cover {
   transition: transform 1s, z-index 0.5s 0.5s;
   transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
   z-index: 1;
 }
 #checkbox-page1:checked ~ .book #page1 {
   transform: rotateY(-180deg);
-  z-index: 2
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  z-index: 2;
 }
 #checkbox-page2:checked ~ .book #page2 {
   transform: rotateY(-180deg);
-  z-index: 3
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  z-index: 3;
 }
 
