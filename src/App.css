@@ -517,6 +517,8 @@ a:hover{
   align-items: center;
   position:fixed;
   width: 100vw;
+  overflow: scroll;
+  scroll-behavior: smooth;
 }
 .userNote{
   position: absolute;
@@ -537,7 +539,6 @@ a:hover{
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   perspective: 1600px;
-
 }
 .coverCover{
   position: absolute;

@@ -187,7 +187,7 @@ function OpenBook(props) {
               <div className="topExperience" id="bari">
                 <img src={all} alt="bari" />
                 <p>
-                  <span className="boldText">Founder at Bari</span>Hands-on with
+                  <span className="boldText">Co-Founder at Bari</span>Hands-on with
                   the development and maintenance of our e-commerce website,
                   ensuring its functionality and performance.
                 </p>
