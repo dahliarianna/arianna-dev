@@ -246,7 +246,7 @@ function OpenBook(props) {
                   </p>
                 </div>
                 <div>
-                  <p className="boldText">PLANTDADDY</p>
+                  <p className="boldText">PLANT CARE</p>
                   <p>Dashboard for plant care with SMS reminders</p>
                   <p>
                     <span>Tech used:</span> JavaScript, React, NodeJS, Express, MongoDB,
