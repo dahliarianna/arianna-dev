@@ -22,6 +22,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import ClosedBook from "./ClosedBook";
 import OpenBook from "./OpenBook";
+import BookShelf from "./BookShelf";
 
 function App() {
   const [showClosedBook, setShowClosedBook] = useState(true);
@@ -37,6 +38,7 @@ function App() {
 
   return (
     <div className="App">
+      <BookShelf/>
       {!clicked?      
        <div className="userNote">
         <p>CLICK BOOK TO BEGIN</p>
