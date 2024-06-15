@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ariannalogo from "./assets/ariannalogo.gif";
+import neonlogo from "./assets/neonlogo.png";
 import art8 from "./assets/art8.JPG";
 import birthday from "./assets/birthday.JPG";
 import ramen from "./assets/ramen.JPG";
@@ -43,7 +43,7 @@ function Home() {
   return (
     <div className="homePage">
       <div className="logo">
-        <img src={ariannalogo} alt="logo" className="actualLogo" />
+        <img src={neonlogo} alt="logo" className="actualLogo" />
       </div>
       <div className="bodyContent">
         <div className="intro">
