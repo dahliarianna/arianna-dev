@@ -31,7 +31,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowClosedBook(false);
-    }, 8000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);

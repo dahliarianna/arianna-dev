@@ -19,7 +19,7 @@ function OpenBook(props) {
   const [username, setUsername] = useState("");
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
-  const {clicked, setClicked} = props;
+  const { clicked, setClicked } = props;
 
   const handleUsername = (e) => {
     setUsername(e.target.value);
@@ -30,7 +30,6 @@ function OpenBook(props) {
   const handleBookClick = () => {
     setClicked(true);
   };
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -64,7 +63,7 @@ function OpenBook(props) {
       {/* <input type="checkbox" id="checkbox-cover" /> */}
       <input type="checkbox" id="checkbox-page1" />
       <input type="checkbox" id="checkbox-page2" />
-      {/* <input type="checkbox" id="checkbox-page3" /> */}
+      <input type="checkbox" id="checkbox-page3" />
       <div className="book" onClick={handleBookClick}>
         <div className="cover">
           <div className="coverFrontPage">
@@ -173,6 +172,7 @@ function OpenBook(props) {
             <label className="prev" htmlFor="checkbox-page1"></label>
           </div>
         </div>
+
         <div className="page" id="page2">
           <div className="frontPage">
             <span className="bookShadow"></span>
@@ -184,14 +184,6 @@ function OpenBook(props) {
               <h1>YOUR EXPERIENCE?</h1>
             </div>
             <div className="pageContentSub">
-              <div className="topExperience" id="bari">
-                <img src={all} alt="bari" />
-                <p>
-                  <span className="boldText">Co-Founder at Bari</span>Hands-on with
-                  the development and maintenance of our e-commerce website,
-                  ensuring its functionality and performance.
-                </p>
-              </div>
               <div className="bottomExperience">
                 <p>
                   <span className="boldText">Software Engineer at Serene</span>
@@ -199,15 +191,18 @@ function OpenBook(props) {
                   designed for visualizing metrics and preventing Lambda cold
                   starts.
                 </p>
+                <div className="centerExperience">
+                  <p>
+                    Developed modular and reusable UI components through React.
+                  </p>
+                  <p>
+                    Implemented Express.js as the backend framework to
+                    proficiently manage routing, middleware, and server-side
+                    tasks.
+                  </p>
+                  <p>Utilized MongoDB to store user credentials.</p>
+                </div>
                 <img src={serene} alt="serene" />
-              </div>
-              <div className="topExperience" id="lavang">
-                <img src={lavangphoto} alt="lavang" />
-                <p>
-                  <span className="boldText">UI Developer at Lavang</span>Design
-                  and enhance the UI, resulting in a website with an average of
-                  10,000 monthly visitors.
-                </p>
               </div>
             </div>
 
@@ -223,36 +218,30 @@ function OpenBook(props) {
               <p>The Software Engineer</p>
               <p>Vol 24</p>
             </div>
-            <div className="pageContent">
-              <h1>WHAT ABOUT PROJECTS?</h1>
-              <div className="projectSection">
-                <div>
-                  <p className="boldText">CNTCN</p>
+            {/* <div className="pageContent pageContentException">
+              <h1>YOUR EXPERIENCE?</h1>
+            </div> */}
+            <div className="pageContentSub">
+              <div className="bottomExperience black-bg">
+                <p>
+                  <span className="boldText">
+                    Co-Founder & Web Developer at Bari
+                  </span>
+                  Hands-on with the development and maintenance of our
+                  e-commerce website, ensuring its functionality and
+                  performance.
+                </p>
+                <div className="centerExperience">
+                  <p>Used HTML and CSS to create a user-friendly UI and UX</p>
                   <p>
-                    Social media platform to connect and share contents with
-                    friends
+                    Actively monitor and maintain the brand's WordPress website
                   </p>
                   <p>
-                    <span>Tech used:</span> JavaScript, Typescript, React, NodeJS, Express,
-                  PostgreSQL, Socket.io, AWS(SDK, S3), Bootstrap, HTML, CSS
-                  </p>
-                </div>
-                <div>
-                  <p className="boldText">BUDDY-STEPS</p>
-                  <p>Individual and team task tracker</p>
-                  <p>
-                    <span>Tech used:</span> JavaScript, React, NodeJS, Express, PostgreSQL,
-                  HTML, SCSS, CSS
-                  </p>
-                </div>
-                <div>
-                  <p className="boldText">PLANT CARE</p>
-                  <p>Dashboard for plant care with SMS reminders</p>
-                  <p>
-                    <span>Tech used:</span> JavaScript, React, NodeJS, Express, MongoDB,
-                  Twilio, HTML, SCSS, CSS
+                    Employed Adobe Photoshop and Illustrator to design brand's
+                    packagings.
                   </p>
                 </div>
+                <img src={all} alt="bari" />
               </div>
             </div>
             <div className="pageFooter">
@@ -262,7 +251,108 @@ function OpenBook(props) {
             <label className="prev" htmlFor="checkbox-page2"></label>
           </div>
         </div>
+
+        {/* TEST NEW DIV */}
         <div className="page" id="page3">
+          <div className="frontPage">
+            <span className="bookShadow"></span>
+            <div className="pageHeader">
+              <p>The Software Engineer</p>
+              <p>Vol 24</p>
+            </div>
+            {/* <div className="pageContent">
+              <h1>YOUR EXPERIENCE?</h1>
+            </div> */}
+            <div className="pageContentSub">
+              <div className="topExperience" id="lavang">
+                <p>
+                  <span className="boldText">UI Developer at Lavang</span>{" "}
+                  Volunteer to design and enhance the UI, resulting in a website
+                  with an average of 10,000 monthly visitors.
+                </p>
+              </div>
+              <div className="bottomExperience">
+                <p>Utilized HTML and CSS to architect and enhance the UI</p>
+                <p>
+                  Leveraged JavaScript to transform the Liturgical calendar from
+                  a static structure to a dynamic and modular system
+                </p>
+              </div>
+              <img src={lavangphoto} alt="lavang" />
+            </div>
+
+            <div className="pageFooter">
+              <div></div>
+              <p>page 5</p>
+            </div>
+            <label className="next" htmlFor="checkbox-page3"></label>
+          </div>
+          <div className="backPage">
+            <span className="bookShadowBack"></span>
+            <div className="pageHeader">
+              <p>The Software Engineer</p>
+              <p>Vol 24</p>
+            </div>
+            <div className="pageContent">
+              <h1>WHAT ABOUT PROJECTS?</h1>
+              <div className="projectSection">
+                <div>
+                  <a
+                    className="boldText"
+                    href="https://dahliarianna.github.io/tat-ramen/"
+                    target="blank"
+                  >
+                    TAT RAMEN
+                  </a>
+                  <p>Fully responsive website for a ramen bar</p>
+                  <p>
+                    <span>Tech used:</span> JavaScript, HTML, CSS
+                  </p>
+                </div>
+                <div>
+                  <a
+                    className="boldText"
+                    href="https://cnctn-app-81c9361a875e.herokuapp.com/"
+                    target="blank"
+                  >
+                    CNCTN APP
+                  </a>
+                  <p>
+                    Social media platform to connect and share contents with
+                    friends
+                  </p>
+                  <p>
+                    <span>Tech used:</span> JavaScript, Typescript, React,
+                    NodeJS, Express, PostgreSQL, Socket.io, AWS(SDK, S3),
+                    Bootstrap, HTML, CSS
+                  </p>
+                </div>
+                <div>
+                  <a
+                    className="boldText"
+                    href="https://github.com/CTRI17-Danger-Noodles/Buddy-Steps"
+                    target="blank"
+                  >
+                    BUDDY-STEPS
+                  </a>
+                  <p>Individual and team task tracker</p>
+                  <p>
+                    <span>Tech used:</span> JavaScript, React, NodeJS, Express,
+                    PostgreSQL, HTML, SCSS, CSS
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="pageFooter">
+              <div></div>
+              <p>page 6</p>
+            </div>
+            <label className="prev" htmlFor="checkbox-page3"></label>
+          </div>
+        </div>
+
+        {/* END TEST NEW DIV */}
+        <div className="page" id="page4">
           <div className="frontPage">
             <span className="bookShadow"></span>
             <div className="pageHeader">
@@ -310,7 +400,7 @@ function OpenBook(props) {
             </div>
             <div className="pageFooter">
               <div></div>
-              <p>page 5</p>
+              <p>page 7</p>
             </div>
             {/* <label className="next" htmlFor="checkbox-page3"></label> */}
           </div>
@@ -320,7 +410,7 @@ function OpenBook(props) {
               <p>The Software Engineer</p>
               <p>Vol 24</p>
             </div>
-            <div className="pageContent">
+            <div className="pageContent" id='pageContent'>
               <h1>WHERE TO CONTACT YOU?</h1>
               <div className="socials">
                 <a
