@@ -225,7 +225,7 @@ function OpenBook(props) {
               <div className="bottomExperience black-bg">
                 <p>
                   <span className="boldText">
-                    Web Developer at Bari
+                    Frontend/Web Developer at Bari
                   </span>
                   Hands-on with the development and maintenance of our
                   e-commerce website, ensuring its functionality and
